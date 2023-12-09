@@ -3,35 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tokazaki <tokazaki@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tokazaki <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/30 21:46:14 by tokazaki          #+#    #+#             */
-/*   Updated: 2023/12/09 16:37:45 by tokazaki         ###   ########.fr       */
+/*   Created: 2023/12/09 16:41:09 by tokazaki          #+#    #+#             */
+/*   Updated: 2023/12/09 16:41:12 by tokazaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include "Fixed.hpp"
-#include "color.hpp"
+#include <iostream>
 
 int main() {
-    std::cout << RED;
     Fixed a;
-    std::cout << BLUE;
-    Fixed b(a);
-    std::cout << GREEN;
-    Fixed c;
+    Fixed const b(Fixed(5.05f) * Fixed(2));
 
-    std::cout << RED;
-    c = b;
-
-    std::cout << BLUE;
-    std::cout << a.getRawBits() << std::endl;
-    std::cout << GREEN;
-    std::cout << b.getRawBits() << std::endl;
-    std::cout << RED;
-    std::cout << c.getRawBits() << std::endl;
-    std::cout << BLUE;
+    std::cout << a << std::endl;
+    std::cout << ++a << std::endl;
+    std::cout << a << std::endl;
+    std::cout << a++ << std::endl;
+    std::cout << a << std::endl;
+    std::cout << b << std::endl;
+    std::cout << Fixed::max(a, b) << std::endl;
 
     return 0;
 }
