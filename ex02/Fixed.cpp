@@ -3,43 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tokazaki <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tokazaki <tokazaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 16:41:43 by tokazaki          #+#    #+#             */
-/*   Updated: 2023/12/09 16:41:45 by tokazaki         ###   ########.fr       */
+/*   Updated: 2023/12/13 15:29:59 by tokazaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 #include <cmath>
 
-Fixed::Fixed() : value(0) {
-}
+Fixed::Fixed() : value(0) {}
 
-Fixed::Fixed(const Fixed &other) : value(other.value) {
-}
+Fixed::Fixed(const Fixed &other) : value(other.value) {}
 
-Fixed::Fixed(const int value) : value(value << fractionalBits) {
-}
+Fixed::Fixed(const int value) : value(value << fractionalBits) {}
 
-Fixed::Fixed(const float value) : value(roundf(value * (1 << fractionalBits))) {
-}
+Fixed::Fixed(const float value)
+    : value(roundf(value * (1 << fractionalBits))) {}
 
-Fixed::~Fixed() {
-}
+Fixed::~Fixed() {}
 
 Fixed &Fixed::operator=(const Fixed &other) {
     if (this != &other)
-        this->value = other.getRawBits();
+        this->value = other.value;
     return *this;
-}
-
-int Fixed::getRawBits() const {
-    return this->value;
-}
-
-void Fixed::setRawBits(int const raw) {
-    this->value = raw;
 }
 
 float Fixed::toFloat() const {
@@ -114,16 +102,8 @@ Fixed Fixed::operator--(int) {
     return tmp;
 }
 
-Fixed &Fixed::min(Fixed &a, Fixed &b) {
-    return (a < b) ? a : b;
-}
-
 const Fixed &Fixed::min(const Fixed &a, const Fixed &b) {
     return (a < b) ? a : b;
-}
-
-Fixed &Fixed::max(Fixed &a, Fixed &b) {
-    return (a > b) ? a : b;
 }
 
 const Fixed &Fixed::max(const Fixed &a, const Fixed &b) {

@@ -19,7 +19,7 @@ public:
     Fixed &operator=(const Fixed &other);
 
     int getRawBits() const;
-    void setRawBits(int const raw);
+    //void setRawBits(int const raw);
 
     float toFloat() const;
     int toInt() const;
@@ -43,9 +43,7 @@ public:
     Fixed operator--(int);    // post-decrement
 
     // Static member functions
-    static Fixed &min(Fixed &a, Fixed &b);
     static const Fixed &min(const Fixed &a, const Fixed &b);
-    static Fixed &max(Fixed &a, Fixed &b);
     static const Fixed &max(const Fixed &a, const Fixed &b);
 };
 

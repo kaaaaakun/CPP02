@@ -35,13 +35,3 @@ int Fixed::toInt() const {
 float Fixed::toFloat() const {
     return static_cast<float>(this->value) / (1 << fractionalBits);
 }
-
-int Fixed::getRawBits() const {
-    std::cout << "getRawBits member function called" << std::endl;
-    return this->value;
-}
-
-void Fixed::setRawBits(int const raw) {
-    std::cout << "setRawBits member function called" << std::endl;
-    this->value = raw;
-}
