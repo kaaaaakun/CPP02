@@ -15,7 +15,6 @@ public:
     Fixed(const float value);
     Fixed(const Fixed& other);
     ~Fixed();
-
     Fixed& operator=(const Fixed& other);
 
     int toInt() const;
