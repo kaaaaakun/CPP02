@@ -6,7 +6,7 @@
 /*   By: tokazaki <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/14 13:53:06 by tokazaki          #+#    #+#             */
-/*   Updated: 2023/12/14 13:53:11 by tokazaki         ###   ########.fr       */
+/*   Updated: 2023/12/16 14:25:30 by tokazaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,7 @@ public:
     int getRawBits() const;
     void setRawBits(int const raw);
 };
+
+std::ostream &operator<<(std::ostream &out, const Fixed &fixed);
+
 #endif

@@ -6,7 +6,7 @@
 /*   By: tokazaki <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/14 13:52:59 by tokazaki          #+#    #+#             */
-/*   Updated: 2023/12/14 13:53:51 by tokazaki         ###   ########.fr       */
+/*   Updated: 2023/12/16 14:26:51 by tokazaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,3 +47,9 @@ int Fixed::toInt() const {
 float Fixed::toFloat() const {
     return static_cast<float>(this->value) / (1 << fractionalBits);
 }
+
+std::ostream &operator<<(std::ostream &out, const Fixed &fixed) {
+    out << fixed.toFloat();
+    return out;
+}
+
