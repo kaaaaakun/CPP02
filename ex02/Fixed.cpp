@@ -6,12 +6,13 @@
 /*   By: tokazaki <tokazaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 16:41:43 by tokazaki          #+#    #+#             */
-/*   Updated: 2023/12/13 15:29:59 by tokazaki         ###   ########.fr       */
+/*   Updated: 2023/12/18 01:44:03 by tokazaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 #include <cmath>
+#include <iostream>
 
 Fixed::Fixed() : value(0) {}
 
@@ -71,13 +72,15 @@ Fixed Fixed::operator-(const Fixed &other) const {
 }
 
 Fixed Fixed::operator*(const Fixed &other) const {
-    return Fixed(this->toFloat() * other.toFloat());
+	Fixed result;
+    result.value = (this->value * other.value) / (1 << fractionalBits);
+    return result;
 }
 
 Fixed Fixed::operator/(const Fixed &other) const {
-    if (other.toFloat() == 0)
-        throw std::runtime_error("Division by zero");
-    return Fixed(this->toFloat() / other.toFloat());
+    Fixed result;
+    result.value = (this->value / other.value) * (1 << fractionalBits);
+    return result;
 }
 
 Fixed &Fixed::operator++() {

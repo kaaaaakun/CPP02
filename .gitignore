@@ -8,3 +8,4 @@
 *.json
 *.plist
 a.out
+obj/

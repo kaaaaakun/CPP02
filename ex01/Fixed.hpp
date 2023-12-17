@@ -31,9 +31,6 @@ public:
 
     int toInt() const;
     float toFloat() const;
-
-    int getRawBits() const;
-    void setRawBits(int const raw);
 };
 
 std::ostream &operator<<(std::ostream &out, const Fixed &fixed);
