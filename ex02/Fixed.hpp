@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tokazaki <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tokazaki <tokazaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/14 13:53:32 by tokazaki          #+#    #+#             */
-/*   Updated: 2023/12/14 13:53:58 by tokazaki         ###   ########.fr       */
+/*   Updated: 2023/12/19 16:14:50 by tokazaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,6 @@ public:
     ~Fixed();
     Fixed(const Fixed &other);
     Fixed &operator=(const Fixed &other);
-
-    int getRawBits() const;
-    //void setRawBits(int const raw);
 
     float toFloat() const;
     int toInt() const;
