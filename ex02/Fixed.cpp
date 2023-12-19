@@ -6,7 +6,7 @@
 /*   By: tokazaki <tokazaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 16:41:43 by tokazaki          #+#    #+#             */
-/*   Updated: 2023/12/18 01:44:03 by tokazaki         ###   ########.fr       */
+/*   Updated: 2023/12/19 18:01:48 by tokazaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,15 +72,11 @@ Fixed Fixed::operator-(const Fixed &other) const {
 }
 
 Fixed Fixed::operator*(const Fixed &other) const {
-	Fixed result;
-    result.value = (this->value * other.value) / (1 << fractionalBits);
-    return result;
+	return this->toFloat() * other.toFloat();
 }
 
 Fixed Fixed::operator/(const Fixed &other) const {
-    Fixed result;
-    result.value = (this->value / other.value) * (1 << fractionalBits);
-    return result;
+	return this->toFloat() / other.toFloat();
 }
 
 Fixed &Fixed::operator++() {
@@ -110,6 +106,14 @@ const Fixed &Fixed::min(const Fixed &a, const Fixed &b) {
 }
 
 const Fixed &Fixed::max(const Fixed &a, const Fixed &b) {
+    return (a > b) ? a : b;
+}
+
+Fixed &Fixed::min( Fixed &a,  Fixed &b) {
+    return (a < b) ? a : b;
+}
+
+Fixed &Fixed::max( Fixed &a,  Fixed &b) {
     return (a > b) ? a : b;
 }
 

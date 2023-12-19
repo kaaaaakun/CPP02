@@ -6,7 +6,11 @@
 /*   By: tokazaki <tokazaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/14 13:53:32 by tokazaki          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2023/12/19 16:14:50 by tokazaki         ###   ########.fr       */
+=======
+/*   Updated: 2023/12/19 17:50:31 by tokazaki         ###   ########.fr       */
+>>>>>>> 78622a7 (fix dev)
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +57,8 @@ public:
     // Static member functions
     static const Fixed &min(const Fixed &a, const Fixed &b);
     static const Fixed &max(const Fixed &a, const Fixed &b);
+    static  Fixed &min( Fixed &a,  Fixed &b);
+    static  Fixed &max( Fixed &a,  Fixed &b);
 };
 
 std::ostream &operator<<(std::ostream &out, const Fixed &fixed);
