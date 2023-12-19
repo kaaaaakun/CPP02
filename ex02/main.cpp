@@ -6,7 +6,7 @@
 /*   By: tokazaki <tokazaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 16:41:09 by tokazaki          #+#    #+#             */
-/*   Updated: 2023/12/18 00:30:50 by tokazaki         ###   ########.fr       */
+/*   Updated: 2023/12/19 17:33:16 by tokazaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int main() {
     Fixed a;
-    Fixed const b(Fixed(5.05f) * Fixed(2));
+    Fixed b(Fixed(5.05f) * Fixed(2));
 
     std::cout << a << std::endl;
     std::cout << ++a << std::endl;
@@ -56,5 +56,11 @@ int main() {
         std::cout << "a == a" << std::endl;
     if (a != b)
         std::cout << "a != b" << std::endl;
+
+
+	a = 1.0f;
+	b = 5.0f;
+	std::cout << "a/b:"<< a/b << std::endl;
+	
     return 0;
 }
