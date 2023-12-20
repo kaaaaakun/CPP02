@@ -10,28 +10,6 @@ This repository contains the implementation of a Fixed Point Number class named 
 - `color.hpp`: Header file defining color codes for console output.
 - `Makefile`: Makefile for compiling the project.
 
-## Usage
-
-1. Clone the repository:
-
-    ```bash
-    git clone <repository-url>
-    cd <repository-directory>
-    ```
-
-2. Compile the project using the provided Makefile:
-
-    ```bash
-    make
-    ```
-
-3. Run the executable:
-
-    ```bash
-    ./ex02
-    ```
-
-4. View the console output demonstrating the usage of the `Fixed` class.
 
 ## Overview
 
