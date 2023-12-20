@@ -6,7 +6,7 @@
 /*   By: tokazaki <tokazaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/14 13:53:32 by tokazaki          #+#    #+#             */
-/*   Updated: 2023/12/19 16:14:50 by tokazaki         ###   ########.fr       */
+/*   Updated: 2023/12/20 18:42:48 by tokazaki         ###   ########.fr       */
 /*   Updated: 2023/12/19 17:50:31 by tokazaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
@@ -15,6 +15,7 @@
 # define FIXED_HPP
 
 #include <iostream>
+#include "color.hpp"
 
 class Fixed {
 
